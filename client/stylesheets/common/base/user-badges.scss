@@ -1,0 +1,245 @@
+/* Default badge styles. */
+.user-badge {
+  padding: 3px 8px;
+  color: $primary;
+  border: 1px solid dark-light-diff($primary, $secondary, 90%, -65%);
+  line-height: 19px;
+  display: inline-block;
+  background-color: $secondary;
+  margin: 0 0 3px;
+
+  .fa {
+    padding-right: 3px;
+    font-size: 1.4em;
+    vertical-align: bottom;
+  }
+
+  img {
+    height: 16px;
+    width: 16px;
+  }
+
+  &.badge-type-gold .fa {
+    color: #ffd700;
+  }
+
+  &.badge-type-silver .fa {
+    color: #c0c0c0;
+  }
+
+  &.badge-type-bronze .fa {
+    color: #cd7f32;
+  }
+}
+
+/* User badge listing. */
+.user-badges-list {
+  text-align: center;
+
+  .user-badge {
+    max-width: 80px;
+    text-align: center;
+    vertical-align: top;
+    margin: 10px;
+    border: none;
+
+    .fa {
+      display: block;
+      font-size: 3.571em;
+      margin-bottom: 5px;
+    }
+
+    img {
+      display: block;
+      margin: auto auto 4px;
+      width: 55px;
+      height: 55px;
+    }
+
+    .count {
+      display: block;
+      font-size: 0.8em;
+      color: dark-light-choose(scale-color($primary, $lightness: 50%), scale-color($secondary, $lightness: 50%));
+    }
+  }
+}
+
+/* Badge listing in /badges. */
+.badges-listing {
+  margin: 20px 0;
+  tr {
+    border-bottom: 1px solid dark-light-diff($primary, $secondary, 90%, -60%);
+    td {
+      padding: 10px 0;
+    }
+  }
+
+  border-bottom: 1px solid dark-light-diff($primary, $secondary, 90%, -60%);
+  border-top: 1px solid dark-light-diff($primary, $secondary, 90%, -60%);
+  width: 90%;
+  padding: 10px;
+  display: table;
+
+  .row {
+    display: table-row;
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .user-badge {
+    font-size: $base-font-size;
+  }
+
+  .grant-count {
+    text-align: center;
+    color: dark-light-choose(scale-color($primary, $lightness: 40%), scale-color($secondary, $lightness: 60%));
+    font-size: 120%;
+  }
+
+  .badge, .grant-count {
+    white-space: nowrap;
+  }
+
+  .info {
+    font-size: 0.9em;
+    text-align: right;
+  }
+
+  .description {
+  }
+
+}
+
+@media all and (max-width: 750px) {
+  .show-badge .user-badge-with-posts .badge-user a.post-link {
+    width: auto;
+  }
+  .show-badge div.badge-user {
+    padding: 0;
+  }
+  .badges-listing {
+    display: block;
+
+    .info, .grant-count {
+      text-align: left;
+    }
+
+    .row > div.info { display: none; }
+
+    .row {
+      display: block;
+      > div {
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+/* /badges/:id/:slug page styling. */
+.show-badge {
+  .badge-user {
+    text-align: center;
+    width: 100px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+
+    .details {
+      margin: 0 10px;
+      padding-top: 3px;
+      color: $primary;
+    }
+
+    .username {
+      word-wrap: break-word;
+    }
+
+    .date {
+      display: block;
+      color: lighten($primary, 40%);
+      font-size: 0.714em;
+    }
+  }
+}
+
+.show-badge .user-badge-with-posts .badge-user {
+  width: 45%;
+  padding: 0 0 0 4%;
+  margin-bottom: 20px;
+
+  .badge-info {
+    width: 100px;
+    display: block;
+    float: left;
+  }
+
+  .post-link {
+    width: 250px;
+    display: block;
+    float: left;
+    margin-left: 18px;
+    text-align: left;
+  }
+}
+
+.show-badge .badge-user-info {
+  margin-left: 2%;
+  .earned {
+    margin-top: 15px;
+    font-size: 1.3em;
+  }
+  .username {
+    margin-top: 5px;
+    display: block;
+    color: dark-light-choose(scale-color($primary, $lightness: 30%), scale-color($secondary, $lightness: 70%));
+  }
+}
+
+.show-badge .single-user {
+  margin-left: 2%;
+  padding-bottom: 20px;
+  .load-more {
+    padding-top: 30px;
+    display: block;
+    font-size: 1.2em;
+  }
+}
+
+.show-badge .single-user .badge-user {
+  padding-left: 0;
+
+  text-align: left;
+  display: block;
+  margin: 20px 0;
+  .badge-info {
+    display: none;
+  }
+  .date {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-left: 10px;
+  }
+  .post-link {
+    font-size: 1.3em;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+  }
+  width: 800px;
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.long-description.banner {
+  width: 88%;
+  margin-bottom: 20px;
+}

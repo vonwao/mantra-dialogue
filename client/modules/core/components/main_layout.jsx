@@ -1,8 +1,10 @@
 import React from 'react';
 import Navigation from './navigation.jsx';
+import Header from './header.jsx';
 
 const Layout = ({content = () => null }) => (
   <div>
+      <Header/>
     <header>
     <h1>Mantra Voice</h1>
     <Navigation />
