@@ -1,27 +1,4 @@
-## A Sample Blog App Written in Mantra
 
-This is a sample blog app written in [Mantra](https://github.com/kadirahq/mantra) covering core features of it.
+This app is meant for experimentation and use within the Mantra community.
 
-### Setting Up
-
-* Clone this repo
-* Do `npm install` to install dependencies
-* Make sure you've installed Meteor locally
-
-### Running The App
-
-Simply start your app with `meteor -p 5005`. 
-Then you can access the app on <http://localhost:5005>
-
-### Running Tests
-
-In this app, every part of the client side is fully tested using the familiar tools like Mocha, Chai and Sinon.
-
-Run tests with:
-
-```
-npm test
-```
-
-**See package.json for more information about testing setup.**
-
+If you are interested in working on this, I may be able to add you as a contributor.
